@@ -19,7 +19,9 @@ export default class extends Component {
     const { value } = event.target;
 
     this.setState({ city: value }, () => {
-      this.get(fetcher);
+      if (this.state.value !== '') {
+        this.get(fetcher);
+      }
     });
   };
 
@@ -39,14 +41,14 @@ export default class extends Component {
                   <input
                     type="text"
                     value={city}
-                    placeholder="London"
+                    placeholder="Temuco"
                     onChange={this.onChange(getWeather)}
                     className={`input ${loading ? "is-loading" : null}`}
                   />
                 </div>
               </form>
 
-              {response ? <Weather info={response} /> : null}
+              {response ? <Weather info={response} lookingFor={city} /> : null}
             </Fragment>
           )}
         </FetchWeather>

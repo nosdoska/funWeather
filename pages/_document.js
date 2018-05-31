@@ -11,7 +11,7 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           <title>funWeather - The best App for get the weather</title>
-          <link rel="stylesheet" href="/static/animation.css" />
+          <link href="/static/css/owfont-regular.min.css" rel="stylesheet" type="text/css" />
         </Head>
         <body className="custom_class">
           <Main />
