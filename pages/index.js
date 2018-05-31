@@ -7,7 +7,7 @@ export default () => (
     <div>
       <h1 className="text title">Bienvenido a funWeather</h1>
       <h4 className="text subtitle">
-        Escribe el nombre de una ciudad y presiona <i>Enter</i> para obtener información del tiempo
+        Escribe el nombre de una ciudad para obtener el pronóstico más divertido de todos
       </h4>
 
       <Form />
